@@ -1,0 +1,537 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* Nguyên tắc làm việc
+1. Từ ngoài vào trong
+2. Từ trên xuống dưới
+3. từ tổng quan đến chi tiết
+*/
+
+
+/* 
+1. Vị trí
+2. Kích thước
+3. Màu sắc
+4. Kiểu dáng
+*/
+
+
+/* common */
+
+html {
+    scroll-behavior: smooth;
+}
+
+#main {
+    overflow: hidden;
+}
+
+.text-white {
+    color: #fff !important;
+}
+
+.clear {
+    clear: both;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+    overflow: hidden;
+}
+
+.col {
+    float: left;
+    padding: 0 8px;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-full {
+    width: 100%;
+}
+
+.col-three {
+    width: 33.333333%;
+}
+
+
+/* main */
+
+#header {
+    background-color: rgb(0, 0, 0);
+    height: 46px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    /* overflow: hidden; */
+}
+
+#nav {
+    display: inline-block;
+}
+
+#nav .ti-arrow-circle-down {
+    font-size: 25px;
+}
+
+#nav,
+.subnav {
+    list-style-type: none;
+}
+
+#nav>li {
+    display: inline-block;
+}
+
+#nav li {
+    position: relative;
+}
+
+#nav>li>a {
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 46px;
+}
+
+#nav li a {
+    text-decoration: none;
+    font-size: 25px;
+    padding: 0 24px;
+    display: block;
+}
+
+#nav li:hover .subnav {
+    display: block;
+    cursor: pointer;
+}
+
+#nav .subnav li:hover a,
+#nav>li:hover>a {
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+#nav .subnav {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav .subnav a {
+    color: #000;
+    padding: 12px;
+    line-height: 18px;
+    min-width: 200px;
+}
+
+#header .menu-icon,
+#header .search-icon {
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    line-height: 46px;
+}
+
+#header .searchbutton {
+    float: right;
+    padding: 0 21px;
+}
+
+#header .mobile-menu-btn {
+    top: 0;
+    position: absolute;
+    right: 0;
+    float: right;
+    padding: 0 21px;
+    color: #fff;
+    line-height: 46px;
+    display: none;
+}
+
+#header .searchbutton:hover {
+    color: #fff;
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+#header .mobile-menu-btn:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+#slides {
+    margin-top: 46px;
+    padding-top: 60%;
+    background: url('/BTS/assets/img/bia/bia1.1.jpg') top center / cover no-repeat;
+}
+
+#slides .text-content {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    top: 450px;
+    width: 100%;
+    text-align: center;
+    text-shadow: 0 0 1px black;
+}
+
+#slides .text-heading {
+    font-size: 60px;
+    padding: 12px;
+    text-transform: uppercase;
+}
+
+#slides .text-para {
+    font-size: 30px;
+}
+
+#content .content-section {
+    width: 800px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 24px 0;
+    margin-top: 80px;
+}
+
+#content .section-heading {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 530;
+    letter-spacing: 5px;
+}
+
+#content .section-slogan {
+    text-align: center;
+    font-size: 30px;
+    padding: 20px 0 25px 0;
+    font-weight: 450;
+    opacity: 0.6;
+}
+
+#content .section-story {
+    text-align: justify;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+#content .section-picture {
+    margin-top: 48px;
+    overflow: hidden;
+    padding: 30px 0 60px 0;
+}
+
+#content .member-list {
+    float: left;
+    top: 0;
+    overflow: hidden;
+}
+
+#content .member-list .member-name {
+    font-weight: bold;
+    text-align: center;
+}
+
+#content .member-list img {
+    display: block;
+    max-width: 440px;
+    max-height: 181px;
+}
+
+
+/* Tour section */
+
+.music-section {
+    background-color: #000;
+}
+
+.music-section .section-heading {
+    margin-top: 40px;
+}
+
+.album-section {
+    min-width: 768px;
+    min-height: 119.5px;
+    background-color: #fff;
+    margin-top: 40px;
+}
+
+.album-section li {
+    list-style-type: none;
+    padding: 10px 15px;
+    opacity: 0.7;
+    font-size: 15px;
+    color: #000;
+}
+
+.album-section .sold-out {
+    padding: 4px 10px;
+    background-color: #f72415;
+    color: #fff;
+    margin-left: 10px;
+}
+
+.album-section .quantity {
+    color: #fff;
+    background-color: #000;
+    float: right;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    border-radius: 50%;
+    margin-top: -2px;
+}
+
+.place-list {
+    overflow: hidden;
+    margin-top: 32px;
+    margin-bottom: 48px;
+    padding-bottom: 32px;
+}
+
+.place-item {
+    overflow: hidden;
+}
+
+.place-img {
+    width: 100%;
+    display: block;
+}
+
+.place-img:hover {
+    opacity: 0.6;
+}
+
+.place-item .place-content {
+    background-color: #fff;
+    padding: 10px 15px;
+    font-size: 18px;
+}
+
+.place-heading {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.place-buy {
+    margin: 0 0 16px 0;
+    padding: 8px 16px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+    display: inline-block;
+}
+
+.place-buy:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+.place-time {
+    opacity: 0.7;
+    margin: 7px 0;
+}
+
+.place-desc {
+    line-height: 1.4;
+    margin: 0 0 15px 0;
+}
+
+
+/* phan contact */
+
+.contact-content {
+    padding: 32px 0;
+}
+
+.contact-infor {
+    font-size: 18px;
+}
+
+.contact-form {
+    font-size: 15px;
+}
+
+.contact-infor i[class*="ti-"] {
+    width: 30px;
+    display: inline-block;
+    line-height: 1.5;
+}
+
+.contact-mess {
+    margin-top: 10px;
+}
+
+.form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.form-send {
+    margin: 16px 0;
+    float: right;
+    padding: 8px 16px;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #ccc;
+}
+
+.form-send:hover {
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+}
+
+
+/* anh fandom */
+
+.map-section img {
+    width: 100%;
+}
+
+
+/* phan cuoi cua trang web */
+
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+}
+
+#footer .logo a {
+    font-size: 24px;
+    text-decoration: none;
+    color: rgb(0, 0, 0, 0.8);
+}
+
+#footer .logo a:hover {
+    color: #ccc;
+    cursor: pointer;
+}
+
+#footer .copyright {
+    color: #000;
+    opacity: 0.75;
+    margin-top: 15px;
+}
+
+#footer .copyright a {
+    color: #000;
+    opacity: 0.75;
+}
+
+
+/* ban tickets */
+
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal-header .bag-tickets {
+    padding: 0 15px;
+}
+
+.modal .modal-contentner {
+    background: #fff;
+    width: 900px;
+    max-width: calc(100% -32px);
+    min-height: 200px;
+    position: relative;
+}
+
+.modal .modal-close {
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 36px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.modal .modal-close:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+.modal .modal-header {
+    background-color: #009688;
+    color: #fff;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.modal-body {
+    padding: 0.15px 16px;
+}
+
+.modal-label {
+    display: block;
+    font-size: 15px;
+    margin: 15px 0;
+}
+
+.modal-input {
+    font-size: 15px;
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+}
+
+#buy-tickets {
+    background-color: #009688;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #fff;
+    padding: 16px;
+}
+
+#buy-tickets:hover {
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+}
+
+.modal-footer {
+    font-size: 15px;
+    margin: 15px 0;
+    font-family: "Lato", sans-serif;
+    line-height: 1.5;
+    float: right;
+}
+
+.modal-footer a {
+    color: blue;
+}

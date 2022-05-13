@@ -1,0 +1,30 @@
+/* Mobile responsive */
+
+@media (max-width: 739px) {
+    #nav {
+        display: block;
+    }
+    #nav>li {
+        display: block;
+    }
+    #nav .subnav {
+        position: initial;
+        background-color: #333;
+    }
+    #nav .subnav a {
+        color: #fff;
+        padding: 12px 46px;
+    }
+    #nav>li:first-child {
+        display: inline-block;
+    }
+    #header .searchbutton {
+        display: none;
+    }
+    #header .mobile-menu-btn {
+        display: block;
+    }
+    #header {
+        overflow: hidden;
+    }
+}
