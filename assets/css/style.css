@@ -174,7 +174,7 @@ html {
 #slides {
     margin-top: 46px;
     padding-top: 60%;
-    background: url('/BTS/assets/img/bia/bia1.1.jpg') top center / cover no-repeat;
+    background: url('../img/bia/bia1.1.jpg') top center / cover no-repeat;
 }
 
 #slides .text-content {
